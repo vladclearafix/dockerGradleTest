@@ -39,15 +39,9 @@ subprojects {
 scmVersion {
     versionIncrementer 'incrementMinor'
     tag {
-        allprojects {
+        allprojects { project ->
             prefix = project.name
         }
-    }
-}
-
-task hello {
-    allprojects {
-        println project.name
     }
 }
 
