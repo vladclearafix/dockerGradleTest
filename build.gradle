@@ -4,18 +4,51 @@ buildscript {
     }
 }
 
-//plugins {
-//    id 'pl.allegro.tech.build.axion-release' version '1.8.1'
-//}
+plugins {
+    id 'pl.allegro.tech.build.axion-release' version '1.8.1'
+}
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '4.6' //version required
+    gradleVersion = '4.6'
+}
+
+subprojects {
+    apply plugin: 'pl.allegro.tech.build.axion-release'
 }
 
 //scmVersion {
-//    tag {
-//        prefix = 'my-project-name'
-//    }
+//    branchVersionIncrementer = [
+//            'feature/.*' : 'incrementMinor',
+//            'bugfix/.*' : { c -> c.currentVersion.incrementPatchVersion() },
+//            'legacy/.*' : [ 'incrementMinorIfNotOnRelease', [releaseBranchPattern: 'legacy/release.*'] ]
+//    ]
 //}
-//
-//project.version = scmVersion.version
+
+//scmVersion {
+//    useHighestVersion = true
+//}
+
+//scmVersion {
+//    versionIncrementer 'incrementMinorIfNotOnRelease', [releaseBranchPattern: 'release.*']
+//}
+
+//scmVersion {
+//    versionCreator 'versionWithBranch'
+//}
+
+scmVersion {
+    versionIncrementer 'incrementMinor'
+    tag {
+        allprojects {
+            prefix = project.name
+        }
+    }
+}
+
+task hello {
+    allprojects {
+        println project.name
+    }
+}
+
+project.version = scmVersion.version
