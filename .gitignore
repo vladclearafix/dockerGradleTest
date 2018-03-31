@@ -4,3 +4,4 @@
 /.gradle/
 superapp/target/
 supermonitor/target/
+gradle/.DS_Store
