@@ -1,0 +1,21 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+//plugins {
+//    id 'pl.allegro.tech.build.axion-release' version '1.8.1'
+//}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.6' //version required
+}
+
+//scmVersion {
+//    tag {
+//        prefix = 'my-project-name'
+//    }
+//}
+//
+//project.version = scmVersion.version
