@@ -1,3 +1,3 @@
 object Superapp extends App {
-  println("SUPERAPP: version 2.0")
+  println("SUPERAPP: version 0.1.1")
 }
