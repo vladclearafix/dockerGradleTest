@@ -1,5 +1,5 @@
 scmVersion {
     tag {
-        prefix = 'my-project-name'
+        prefix = 'superapp'
     }
 }
