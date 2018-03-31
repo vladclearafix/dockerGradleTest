@@ -1,0 +1,5 @@
+scmVersion {
+    tag {
+        prefix = 'my-project-name'
+    }
+}
