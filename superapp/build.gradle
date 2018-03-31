@@ -1,4 +1,5 @@
 scmVersion {
+    useHighestVersion = true
     tag {
         prefix = 'superapp'
     }

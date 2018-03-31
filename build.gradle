@@ -37,6 +37,8 @@ subprojects {
 //}
 
 scmVersion {
+    useHighestVersion = true
+
     tag {
         prefix = 'my-project-name'
     }
