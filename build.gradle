@@ -37,10 +37,8 @@ subprojects {
 //}
 
 scmVersion {
-    versionIncrementer 'incrementMinor'
-
     tag {
-        prefix = "hello"
+        prefix = 'my-project-name'
     }
 }
 
